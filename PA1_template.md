@@ -25,30 +25,9 @@ library(ggplot2)
 1. **Load the data (i.e.read.csv())**
 
 ```r
-knitr::opts_knit$get("base.dir")
-```
-
-```
-## [1] "D:/JM/informatique/datascience_specialization/Course IIIII - Reproducible Research/Week2 - Markdown and knitr/III- Course_project1/RepData_PeerAssessment1"
-```
-
-```r
-knitr::opts_knit$get("base.url")
-```
-
-```
-## NULL
-```
-
-```r
-knitr::opts_chunk$get("fig.path")
-```
-
-```
-## [1] "figure/"
-```
-
-```r
+#knitr::opts_knit$get("base.dir")
+#knitr::opts_knit$get("base.url")
+#knitr::opts_chunk$get("fig.path")
 #-----------------------------------------------------------------------------------------------
 # Step 1: Load the data
 #

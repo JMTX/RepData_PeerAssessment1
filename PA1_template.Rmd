@@ -23,9 +23,9 @@ library(ggplot2)
 <br>
 1. **Load the data (i.e.read.csv())**
 ```{r}
-knitr::opts_knit$get("base.dir")
-knitr::opts_knit$get("base.url")
-knitr::opts_chunk$get("fig.path")
+#knitr::opts_knit$get("base.dir")
+#knitr::opts_knit$get("base.url")
+#knitr::opts_chunk$get("fig.path")
 #-----------------------------------------------------------------------------------------------
 # Step 1: Load the data
 #
