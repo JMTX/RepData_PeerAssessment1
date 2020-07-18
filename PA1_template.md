@@ -25,8 +25,30 @@ library(ggplot2)
 1. **Load the data (i.e.read.csv())**
 
 ```r
-#knitr::opts_knit$get("base.dir")
-#knitr::opts_chunk$get("fig.path")
+knitr::opts_knit$get("base.dir")
+```
+
+```
+## [1] "D:/JM/informatique/datascience_specialization/Course IIIII - Reproducible Research/Week2 - Markdown and knitr/III- Course_project1/RepData_PeerAssessment1"
+```
+
+```r
+knitr::opts_knit$get("base.url")
+```
+
+```
+## NULL
+```
+
+```r
+knitr::opts_chunk$get("fig.path")
+```
+
+```
+## [1] "figure/"
+```
+
+```r
 #-----------------------------------------------------------------------------------------------
 # Step 1: Load the data
 #
@@ -70,7 +92,7 @@ df_sum_steps<-data_activity%>%group_by(date)%>%summarize(sum_steps=sum(steps,na.
 with( df_sum_steps, barplot(sum_steps~date, main="Histogram of the total number of steps taken each day", ylab="number of steps"))
 ```
 
-![](https://github.com/JMTX/RepData_PeerAssessment1figure/unnamed-chunk-3-1.png)<!-- -->
+![](figure/unnamed-chunk-3-1.png)<!-- -->
 <br>
 3. **Calculate and report the mean and median of the total number of steps taken per day**
 
@@ -107,7 +129,7 @@ abline(v=max_interval,col="red")
 mtext(max_interval,at = max_interval,col="red",side=1 )
 ```
 
-![](https://github.com/JMTX/RepData_PeerAssessment1figure/unnamed-chunk-5-1.png)<!-- -->
+![](figure/unnamed-chunk-5-1.png)<!-- -->
 <br>
 2. **Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?**  
 
@@ -161,7 +183,7 @@ df_sum_steps2<-data_activity2%>%group_by(date)%>%summarize(sum_steps=sum(steps,n
 with( df_sum_steps2, barplot(sum_steps~date, main="Histogram of the total number of steps taken each day", ylab="number of steps"))
 ```
 
-![](https://github.com/JMTX/RepData_PeerAssessment1figure/unnamed-chunk-8-1.png)<!-- -->
+![](figure/unnamed-chunk-8-1.png)<!-- -->
 
 ```r
 #Calculate and report the mean and median total number of steps taken per day 
@@ -202,6 +224,6 @@ g<-ggplot(df_average,aes(interval,mean_activity))
 g + geom_line() + facet_wrap(weekdays~.,nrow=2,ncol=1, strip.position="top")+ylab("Number of steps")#+  facet_grid(weekdays~.,switch="both")+facet_wrap(facets, strip.position="right")
 ```
 
-![](https://github.com/JMTX/RepData_PeerAssessment1figure/unnamed-chunk-10-1.png)<!-- -->
+![](figure/unnamed-chunk-10-1.png)<!-- -->
 
 We can observe small differences between both patterns.

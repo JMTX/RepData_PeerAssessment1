@@ -9,7 +9,7 @@ date: "18 juillet 2020"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(base.dir=getwd(),base.url = "https://github.com/JMTX/RepData_PeerAssessment1")
+knitr::opts_knit$set(base.dir=getwd())#,base.url = "https://github.com/JMTX/RepData_PeerAssessment1/blob/master/")
 knitr::opts_chunk$set(fig.path="figure/")
 ```
 
@@ -23,8 +23,9 @@ library(ggplot2)
 <br>
 1. **Load the data (i.e.read.csv())**
 ```{r}
-#knitr::opts_knit$get("base.dir")
-#knitr::opts_chunk$get("fig.path")
+knitr::opts_knit$get("base.dir")
+knitr::opts_knit$get("base.url")
+knitr::opts_chunk$get("fig.path")
 #-----------------------------------------------------------------------------------------------
 # Step 1: Load the data
 #
