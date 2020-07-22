@@ -68,7 +68,8 @@ df_sum_steps<-data_activity%>%group_by(date)%>%summarize(sum_steps=sum(steps,na.
 
 ```{r}
 #plot the Histogram of the total number of steps taken each day
-with( df_sum_steps, barplot(sum_steps~date, main="Histogram of the total number of steps taken each day", ylab="number of steps"))
+#with( df_sum_steps, barplot(sum_steps~date, main="Histogram of the total number of steps taken each day", ylab="number of steps"))
+with( df_sum_steps, hist(sum_steps,,breaks=10,main="Histogram of the total number of steps taken each day", xlab="number of steps per day"))
 ```
 <br>
 
@@ -157,7 +158,8 @@ data_activity2[NA_rows,1] <- df_average_day_activity[match(data_activity2[NA_row
 df_sum_steps2<-data_activity2%>%group_by(date)%>%summarize(sum_steps=sum(steps,na.rm=TRUE))
 
 #plot the Histogram of the total number of steps taken each day
-with( df_sum_steps2, barplot(sum_steps~date, main="Histogram of the total number of steps taken each day", ylab="number of steps"))
+#with( df_sum_steps2, barplot(sum_steps~date, main="Histogram of the total number of steps taken each day", ylab="number of steps"))
+with( df_sum_steps2, hist(sum_steps,,breaks=10,main="Histogram of the total number of steps taken each day", xlab="number of steps per day"))
 
 #Calculate and report the mean and median total number of steps taken per day 
 #------------------------------------------------------------------------------------------------
